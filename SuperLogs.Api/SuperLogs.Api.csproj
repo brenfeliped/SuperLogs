@@ -31,7 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SuperLogs.Model\SuperLogs.Model.csproj" />
     <ProjectReference Include="..\SuperLogs.Service\SuperLogs.Service.csproj" />
     <ProjectReference Include="..\SuperLogs.Transport\SuperLogs.Transport.csproj" />
   </ItemGroup>
