@@ -62,8 +62,14 @@ namespace SuperLogs.Api
             
             services.AddControllers();
 
+            
+
             services.AddDbContext<AppDbContext>();
             services.AddScoped<LogService>();
+
+            services.AddCors(c => {
+                c.AddPolicy("AllowPolicy", options => options.AllowAnyOrigin());
+            });
 
             services.AddSwaggerGen(x => x.SwaggerDoc(name: "v1", new Microsoft.OpenApi.Models.OpenApiInfo {Title= "Super Logs", Version = "v1"}));
         }
@@ -83,6 +89,8 @@ namespace SuperLogs.Api
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseCors(options => options.AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {
