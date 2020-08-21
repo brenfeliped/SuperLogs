@@ -76,7 +76,7 @@ namespace SuperLogs.Service
                 {
                     IdLog = l.IdLog,
                     Descricao = l.Descricao,
-                    IdTipoLog = l.IdLog,
+                    IdTipoLog = l.IdTipoLog,
                     Eventos = l.Eventos,
                     IdStatus = l.IdStatus
                 };
