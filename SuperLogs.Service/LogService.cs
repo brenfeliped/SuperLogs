@@ -77,7 +77,8 @@ namespace SuperLogs.Service
                     IdLog = l.IdLog,
                     Descricao = l.Descricao,
                     Level = l.TipoLog == null? null : l.TipoLog.Tipo,
-                    Eventos = l.Eventos
+                    Eventos = l.Eventos,
+                    IdStatus = l.IdStatus
                 };
 
                 logsDto.Add(dto);

@@ -10,5 +10,6 @@ namespace SuperLogs.Transport.DTOs
         public string Level { get; set; }
         public string Descricao { get; set; }
         public int Eventos { get; set; }
+        public int IdStatus { get; set; }
     }
 }
