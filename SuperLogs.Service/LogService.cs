@@ -76,7 +76,7 @@ namespace SuperLogs.Service
                 {
                     IdLog = l.IdLog,
                     Descricao = l.Descricao,
-                    Level = l.TipoLog.Tipo,
+                    Level = l.TipoLog == null? null : l.TipoLog.Tipo,
                     Eventos = l.Eventos
                 };
 
