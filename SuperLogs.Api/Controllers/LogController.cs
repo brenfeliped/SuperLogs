@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using SuperLogs.Service;
 using SuperLogs.Transport;
 using SuperLogs.Transport.DTOs;
@@ -6,6 +7,7 @@ using SuperLogs.Transport.DTOs;
 namespace SuperLogs.Api.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     [ApiController]
     public class LogController : ControllerBase
     {
